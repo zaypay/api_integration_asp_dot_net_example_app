@@ -31,10 +31,6 @@ C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects
 C:\Documents and Settings\Administrator\My Documents\GitHub\api_integration_asp_dot_net_example_app\MvcApplication2\MvcApplication2\bin\MvcApplication2.dll
 C:\Documents and Settings\Administrator\My Documents\GitHub\api_integration_asp_dot_net_example_app\MvcApplication2\MvcApplication2\bin\MvcApplication2.pdb
 C:\Documents and Settings\Administrator\My Documents\GitHub\api_integration_asp_dot_net_example_app\MvcApplication2\MvcApplication2\bin\EntityFramework.dll
-C:\Documents and Settings\Administrator\My Documents\GitHub\api_integration_asp_dot_net_example_app\MvcApplication2\MvcApplication2\bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
-C:\Documents and Settings\Administrator\My Documents\GitHub\api_integration_asp_dot_net_example_app\MvcApplication2\MvcApplication2\bin\Microsoft.Practices.EnterpriseLibrary.Logging.dll
-C:\Documents and Settings\Administrator\My Documents\GitHub\api_integration_asp_dot_net_example_app\MvcApplication2\MvcApplication2\bin\nunit.framework.dll
-C:\Documents and Settings\Administrator\My Documents\GitHub\api_integration_asp_dot_net_example_app\MvcApplication2\MvcApplication2\bin\Zaypay.dll
 C:\Documents and Settings\Administrator\My Documents\GitHub\api_integration_asp_dot_net_example_app\MvcApplication2\MvcApplication2\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
 C:\Documents and Settings\Administrator\My Documents\GitHub\api_integration_asp_dot_net_example_app\MvcApplication2\MvcApplication2\bin\Microsoft.Practices.Unity.Interception.dll
 C:\Documents and Settings\Administrator\My Documents\GitHub\api_integration_asp_dot_net_example_app\MvcApplication2\MvcApplication2\bin\Microsoft.Practices.ServiceLocation.dll
@@ -55,3 +51,7 @@ C:\Documents and Settings\Administrator\My Documents\GitHub\api_integration_asp_
 C:\Documents and Settings\Administrator\My Documents\GitHub\api_integration_asp_dot_net_example_app\MvcApplication2\MvcApplication2\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\Administrator\My Documents\GitHub\api_integration_asp_dot_net_example_app\MvcApplication2\MvcApplication2\obj\Debug\MvcApplication2.dll
 C:\Documents and Settings\Administrator\My Documents\GitHub\api_integration_asp_dot_net_example_app\MvcApplication2\MvcApplication2\obj\Debug\MvcApplication2.pdb
+C:\Documents and Settings\Administrator\My Documents\GitHub\api_integration_asp_dot_net_example_app\MvcApplication2\MvcApplication2\bin\Zaypay.pdb
+C:\Documents and Settings\Administrator\My Documents\GitHub\api_integration_asp_dot_net_example_app\MvcApplication2\MvcApplication2\bin\Microsoft.Practices.Unity.Interception.xml
+C:\Documents and Settings\Administrator\My Documents\GitHub\api_integration_asp_dot_net_example_app\MvcApplication2\MvcApplication2\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Documents and Settings\Administrator\My Documents\GitHub\api_integration_asp_dot_net_example_app\MvcApplication2\MvcApplication2\bin\Microsoft.Practices.Unity.xml
