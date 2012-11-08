@@ -51,7 +51,8 @@ namespace MvcApplication2.Controllers
 
                     }
                     catch (Exception e)
-                    {                        
+                    {
+                        LogEntry(e.Message);
                         return Json(new { success = false, redirect = false, message = "Oops!! Some error occured" }, JsonRequestBehavior.AllowGet);
                     }
                 }
@@ -171,6 +172,7 @@ namespace MvcApplication2.Controllers
                 }
                 catch (Exception ex)
                 {
+                    LogEntry(ex.Message);
                     return Json(new { success = false, message = "Some error occured while retrieving the payment methods , try again !!" }, JsonRequestBehavior.AllowGet);
                 }
             }
