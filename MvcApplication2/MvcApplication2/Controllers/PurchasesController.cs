@@ -25,7 +25,8 @@ namespace MvcApplication2.Controllers
         LogEntry logEntry = new LogEntry();            
         
         public ActionResult SubmitVerificationCode()
-        {            
+        {           
+            
             int id = 0;            
             Int32.TryParse(Request.Form["purchaseId"], out id);
             
@@ -190,7 +191,6 @@ namespace MvcApplication2.Controllers
         public ActionResult Create(int productId = 0)
         {
 
-
             Product product = db.Products.Find(productId);
 
             if (product != null)
@@ -251,6 +251,7 @@ namespace MvcApplication2.Controllers
                 }
                 catch (Exception e)
                 {
+
                     
                     string mesg = GetExceptionMessage(e);
                     
@@ -258,6 +259,7 @@ namespace MvcApplication2.Controllers
                         throw e;
                     else
                     {
+                        System.Diagnostics.Debug.WriteLine("IN DETAIS WITH ID------------------: ------------------------------------------");
                         LogEntry(e.Message);
                         ViewData["error"] = mesg;
                         return View("../products/index", db.Products.ToList());
