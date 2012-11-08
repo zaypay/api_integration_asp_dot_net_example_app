@@ -7,9 +7,6 @@
 Doc for Demo App:
 ---------------------------
 
-First you have to install all the required dlls. There is a saperate folder for dlls that has all required dlls. It also has zaypay
-dll.
-
 ### Port Forwarding
 
 If you want to run this application on your localhost, and yet connect to the Zaypay platform to create payments, receive reports etc, you might need to configure port forwarding on your local machine.
@@ -59,4 +56,3 @@ You have to restart iisexpress for changes to take affect.
 
 1. Your machine is accessible from external source.
 2. __Zaypay.json__ file is in __App_Data__ directory of the project with proper id to key mappings.
-3. dlls for __Zaypay, Mircosoft.Practices and nunit__ are added to references folder of the project
