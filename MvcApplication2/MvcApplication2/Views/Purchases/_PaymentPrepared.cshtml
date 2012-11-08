@@ -1,0 +1,44 @@
+﻿
+<fieldset>       
+    <p align="left" class="spaced-font">@ViewData["instructions"]@ViewData["status"]</p>
+    <div id="spin-div" class="spin-div"></div>        
+    
+</fieldset>
+
+    
+<script type="text/javascript">
+    
+
+    function CheckStatus() {
+
+        var dataToSend = {
+            purchaseId: "@Model.ID"            
+        };
+
+        $.ajax({
+            url: "/Purchases/GetStatus",
+            type: 'POST',
+            data: dataToSend,
+            success: function (data) {
+
+                if (data["status"] == "prepared" || data["status"] == "in_progress") {
+                    //alert("not doing anytihbg")
+                }
+                else if (data["success"] == false) {
+                    //alert("failed");
+                }
+                else {                    
+                    $("#content").html(data);
+                }
+
+            },
+            error: function (response, status, error) {
+                alert("errr");
+            }
+        });
+    }
+   
+    $("#spin-div").spin("large");
+    
+    
+</script>

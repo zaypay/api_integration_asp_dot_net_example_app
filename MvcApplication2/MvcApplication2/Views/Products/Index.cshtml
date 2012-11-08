@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MvcApplication2.Models.Product>
+
+<center>
+    <div class="div-bordered"> 
+        <div id="content">
+
+            <table id="products" class="table table-striped">
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Description
+                    </th>                        
+                </tr>
+
+            @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.ActionLink(item.Name, "Create", "Purchases", new { productId = item.ID }, null)       
+            
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>                     
+                </tr>
+            }
+
+            </table>
+        </div>
+    </div>
+</center>
+
+<script type="text/javascript" src="../../Scripts/Alert.js"></script>
+<script type="text/javascript">
+
+    CloseAlert();
+
+    if("@ViewData["error"]" != ""){
+        ShowError("@ViewData["error"]")        
+    }
+
+    $(document).ready(function () {
+
+        $('#products tr').click(function () {
+            var href = $(this).find("a").attr("href");
+            if (href) {
+                window.location = href;
+            }
+        });
+
+    });
+</script>

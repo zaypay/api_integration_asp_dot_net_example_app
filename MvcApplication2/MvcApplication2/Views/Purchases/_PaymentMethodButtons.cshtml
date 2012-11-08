@@ -1,0 +1,12 @@
+﻿
+@if (Model is List<System.Collections.Hashtable>)
+{
+    foreach (System.Collections.Hashtable paymentMethod in Model)
+    {
+    
+        <div>
+            @Html.RadioButton("paymentMethod", @paymentMethod["payment-method-id"], new { Checked = "checked" }) @paymentMethod["very-short-instructions-with-amount"]
+        </div>
+    
+    }
+}   

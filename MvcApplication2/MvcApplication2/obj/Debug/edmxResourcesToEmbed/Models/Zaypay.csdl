@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ZaypayDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ZaypayDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Products" EntityType="ZaypayDBModel.Product" />
+    <EntitySet Name="Purchases" EntityType="ZaypayDBModel.Purchase" />
+    <AssociationSet Name="FK_Purchases_Products" Association="ZaypayDBModel.FK_Purchases_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Purchases" EntitySet="Purchases" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="PayalogueId" Type="Int32" Nullable="false" />
+    <Property Name="PriceSettingId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Purchases" Relationship="ZaypayDBModel.FK_Purchases_Products" FromRole="Products" ToRole="Purchases" />
+  </EntityType>
+  <EntityType Name="Purchase">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ZaypayPaymentId" Type="Int32" />
+    <Property Name="Status" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ProductId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="ZaypayDBModel.FK_Purchases_Products" FromRole="Purchases" ToRole="Products" />
+  </EntityType>
+  <Association Name="FK_Purchases_Products">
+    <End Role="Products" Type="ZaypayDBModel.Product" Multiplicity="1" />
+    <End Role="Purchases" Type="ZaypayDBModel.Purchase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Purchases">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,25 @@
+﻿@model MvcApplication2.Models.Purchase
+
+
+@using (Html.BeginForm("SubmitVerificationCode", "Purchases", FormMethod.Post, new { id = "verForm" }))
+{
+@Html.ValidationSummary(true)    
+<fieldset>        
+    <p align="left" class="spaced-font">@ViewData["instructions"]</p>
+    <div>                
+        @Html.TextBox("code", "Enter the code here", new { onclick = "this.value= ''" })        
+        
+        @Html.Hidden("purchaseId", @Model.ID)
+        
+        <input type="button" value="Submit" onclick='CheckTriesLeft("@ViewData["verification_tries_left"]")' />            
+    </div>
+</fieldset>        
+        
+}
+
+<script type="text/javascript" src="../../Scripts/Alert.js"></script>
+<script type="text/javascript" src="../../Scripts/VerificationForm.js"></script>
+
+<script type"text/javascript">     
+    StartUp("@ViewData["verification_tries_left"]")        
+</script>
