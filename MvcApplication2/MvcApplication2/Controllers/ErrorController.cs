@@ -15,7 +15,7 @@ namespace MvcApplication2.Controllers
         public ActionResult NotFound()
         {
             Response.StatusCode = (int)HttpStatusCode.NotFound;
-            System.Diagnostics.Debug.WriteLine("exception is: " + Server.GetLastError());
+            System.Diagnostics.Debug.WriteLine("exception is  oooppp : " + Server.GetLastError());
             return View();
         }
         
