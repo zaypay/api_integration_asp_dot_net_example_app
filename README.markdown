@@ -7,6 +7,8 @@
 Doc for Demo App:
 ---------------------------
 
+The demo application depends on some dlls. All dlls (<i>except zaypay.dll</i>) are located in dlls folder. You can add zaypay dll to the project from  [zaypay plugin] (https://github.com/zaypay/asp_dot_net_zaypay_plugin).
+
 ### Port Forwarding
 
 If you want to run this application on your localhost, and yet connect to the Zaypay platform to create payments, receive reports etc, you might need to configure port forwarding on your local machine.
@@ -56,3 +58,5 @@ You have to restart iisexpress for changes to take affect.
 
 1. Your machine is accessible from external source.
 2. __Zaypay.json__ file is in __App_Data__ directory of the project with proper id to key mappings.
+3. You have added zaypay dll from zaypay plugin.
+4. You have added all dlls in dlls folder
