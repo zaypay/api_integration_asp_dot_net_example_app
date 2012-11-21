@@ -1,0 +1,13 @@
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\MvcApplication2\MvcApplication2\bin\MvcApplication2.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\MvcApplication2\MvcApplication2\bin\MvcApplication2.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\MvcApplication2\MvcApplication2\bin\EntityFramework.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\MvcApplication2\MvcApplication2\bin\Zaypay.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\MvcApplication2\MvcApplication2\bin\nunit.framework.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\MvcApplication2\MvcApplication2\bin\NSubstitute.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\MvcApplication2\MvcApplication2\bin\EntityFramework.xml
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\MvcApplication2\MvcApplication2\bin\Zaypay.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\MvcApplication2\MvcApplication2\bin\nunit.framework.xml
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\MvcApplication2\MvcApplication2\bin\NSubstitute.xml
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\MvcApplication2\MvcApplication2\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\MvcApplication2\MvcApplication2\obj\Release\MvcApplication2.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\MvcApplication2\MvcApplication2\obj\Release\MvcApplication2.pdb

@@ -1,0 +1,8 @@
+﻿<center class="alert-center" id="alert-box">
+    @if (Convert.ToInt32(ViewData["verification_tries_left"]) <= 2)
+    {        
+        <div id="tries-left" class="alert alert-error fade in" style="width:500px;">                    
+            <h4 class="alert-heading">You have @ViewData["verification_tries_left"] tries left</h4>
+        </div>
+    }    
+</center>

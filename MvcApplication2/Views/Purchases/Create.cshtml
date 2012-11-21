@@ -1,0 +1,75 @@
+﻿
+@model MvcApplication2.Models.Product
+
+
+    
+@using (Html.BeginForm("Create", "Purchases", FormMethod.Post, new { autocomplete = "off" }))
+{
+@Html.ValidationSummary(true)
+
+<fieldset>    
+    <center>
+    <table class="table-bordered" style="width:800px;">
+        <thead>        
+            <tr>
+                <th colspan=2><h2>@Model.Name</h2>@Html.Hidden("productId", @Model.ID)</th>    
+            </tr>
+        </thead>  
+        <tr style="height:60px;">
+            <th style="width:300px;" >
+                Select Country:
+            </th>
+            <td>
+                @Html.DropDownList("countriesList", ViewData["countries"] as SelectList, "Select a Country")                
+                <span id="country-validation" class="alert alert-error" style="display:none;"></span>
+            </td>            
+        </tr>
+        <tr>
+            <th >
+                Select Language:
+            </th>
+            <td>
+                @Html.DropDownList("languagesList", ViewData["languages"] as SelectList)                                
+            </td>
+        </tr>        
+        <tr>
+            <th style="height:60px;">
+                <div id="radio-label">
+                    Payment Method:                 
+                </div>
+            </th>
+            <td style="height:60px;" >                
+                <div id="radios">
+                    @Html.Partial("_PaymentMethodButtons", ViewData["paymentMethods"])
+                </div>
+            </td>            
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="button" value="Buy" class="btn btn-primary submit_button"  onclick="SubmitForm()"/>   
+            </td>
+        </tr>        
+    </table>
+    </center>        
+
+
+</fieldset>
+}
+
+<script type="text/javascript" src="../../Scripts/Alert.js"></script>
+<script type="text/javascript" src="../../Scripts/Create.js"></script>
+<script type="text/javascript">
+    
+    CheckCountry("@ViewData["ipIsNull"]");
+
+    if("@ViewData["error"]" != ""){
+        ShowError("@ViewData["error"]")                
+    }
+
+    $(document).ready(function () {
+        CountryOnChange("@Model.Name", "@Model.ID");
+        LanguageOnChange("@Model.Name", "@Model.ID");
+
+    });
+</script>
+

@@ -1,0 +1,29 @@
+﻿@model MvcApplication2.Models.Purchase
+
+<script type="text/javascript" src="../../Scripts/spin.js"></script>
+<script type="text/javascript">
+
+    function TriggerInverval() {
+        return window.setInterval(function () { CheckStatus(); }, 3000);
+    }
+
+    var status  = "@Model.Status";      
+    
+    var verification_needed = ("@ViewData["verification_needed"]" === 'True');
+
+    if (status == "prepared" || (status == "in_progress" && !verification_needed) || status == "paused"){
+        intervalId = TriggerInverval();            
+
+    }
+        
+    
+</script>
+
+<center>
+<div class="div-bordered"> 
+    <div id="content">
+        
+        @Html.Partial("_PaymentScreen", @Model, @ViewData)
+    </div>    
+</div>
+</center>

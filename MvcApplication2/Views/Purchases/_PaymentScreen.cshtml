@@ -1,0 +1,31 @@
+﻿
+@if (Model.Status == "in_progress" && (bool)ViewData["verification_needed"] == true)
+{    
+    @Html.Partial("_VerificationCode")    
+}
+else if (Model.Status == "paid")
+{
+    @Html.Partial("_Thankyou")
+}
+else if (Model.Status == "prepared" || Model.Status == "in_progress" || Model.Status == "paused")
+{      
+    @Html.Partial("_PaymentPrepared")
+}
+else if (Model.Status == "expired")
+{
+    @Html.Partial("_PaymentExpiredOrError", new ViewDataDictionary { {"mesg", "Payment has expired"}})      
+}
+else if (Model.Status == "error")
+{
+    @Html.Partial("_PaymentExpiredOrError", new ViewDataDictionary { { "mesg", "Payment has some error" } })        
+}
+   
+<script type="text/javascript">
+    
+    status  = "@Model.Status";
+    
+    if (status != "prepared" && status != "in_progress" && status != "paused" && typeof (intervalId) != "undefined") {                
+        window.clearInterval(intervalId);
+    }
+
+</script>
